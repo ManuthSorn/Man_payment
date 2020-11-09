@@ -57,7 +57,7 @@ namespace Daily_Report
 
             int rowCount2 = xlRange2.Rows.Count;
         
-            String[] Header_Name = { "BU", "Touchpoint", "Customer List Batch Number", "Dummy ID", "Client Number", "Owner Name", "Product Name", "Name of Rider", "Channel", "Interview Date", "Interviewer No", "Call Outcome", "Q1 Renewal Payment tNPS", "Renewal Payment tNPS Group", "Q2/Q3 Renewal Payment tNPS Verbatim", "Q2_Code_01", "Q2_Code_02", "Q2_Code_03", "Q2_Code_04", "Q2_Code_05", "Q2_Code_06", "Q2_Code_07", "Q2_Code_08", "Q2_Code_09", "Q2_Code_10", "Q4 Satisfaction with payment process", "Q5 Renewal Payment Method - Raw", "Q5 Renewal Payment - Who", "Q5.1 Renewal Payment - How", "Q5.2 Renewal Payment - Where", "Q6. Receive any premium notication", "Q6. Receive Phone call from Manulife", "Q6. Receive Phone call from IA/IS", "Q6. Receive Email from Manulife", "Q6. Receive Email from IA/IS", "Q6. Receive SMS from Manulife", "Q6. Receive SMS from IA/IS", "Q6. Receive WahtsApp from IA/IS", "Q6. Receive FB Messenger from my IA/IS", "Q6. Receive Other Noticiation", "Q6. Receive Other Noticiation (specified)", "Q7. Last policy review with IA/IS", "Q8. Satisfaction towards Annual Portfolio Review", "Q9.Area for Improvement verbatim", "Q9_Code_01", "Q9_Code_02", "Q9_Code_03", "Q9_Code_04", "Q9_Code_05", "Q9_Code_06", "Q9_Code_07", "Q9_Code_08", "Q9_Code_09", "Q9_Code_10", "Q10. Permit to Follow Up", "Q11_Request Manulife to call back", "Daily Flag Report", "AGE", "Age Group", "CUSTOMER_CATE", "NUMBER_OF_POLICYS", "ANNUAL_INCOME", "Income Group ", "PRODUCT_CATEGORY", "APE Group", "PREMIUM_PAYMENT_MOD", "CUSTOMER_TENTURE_MANULIFE", "Tenure Group", "PAYMENT_METHOD", "AGENT_ID", "AM_NM", "AGENT_LOCATION", "ORPHAN_STATUS", "UNDERWRITER_ID", "PROCESSING_TIME", "SUBMISSION_DATE", "DATA_ENTRY_DATE", "CUSTOMER_CONFIRMED_DATE", "UW_REASULT", "TRXN_DT", "TRXN_AMT", "PAID_TO_DATE", "Re-PTD" };
+            String[] Header_Name = { "BU", "Touchpoint", "Customer List Batch Number", "Dummy ID", "Client Number", "Owner Name", "Product Name", "Name of Rider", "Channel", "Interview Date", "Interviewer No", "Call Outcome", "Q1 Renewal Payment tNPS", "Renewal Payment tNPS Group", "Q2/Q3 Renewal Payment tNPS Verbatim", "Q2_Code_01", "Q2_Code_02", "Q2_Code_03", "Q2_Code_04", "Q2_Code_05", "Q2_Code_06", "Q2_Code_07", "Q2_Code_08", "Q2_Code_09", "Q2_Code_10", "Q4 Satisfaction with payment process", "Q5 Renewal Payment Method - Raw", "Q5 Renewal Payment - Who", "Q5.1 Renewal Payment - How", "Q5.2 Renewal Payment - Where", "Q6. Receive any premium notication", "Q6. Receive Phone call from Manulife", "Q6. Receive Phone call from IA/IS", "Q6. Receive Email from Manulife", "Q6. Receive Email from IA/IS", "Q6. Receive SMS from Manulife", "Q6. Receive SMS from IA/IS", "Q6. Receive WahtsApp from IA/IS", "Q6. Receive FB Messenger from my IA/IS", "Q6. Receive Other Noticiation", "Q6. Receive Other Noticiation (specified)", "Q7. Last policy review with IA/IS", "Q8. Satisfaction toward Agents", "Q9.Area for Improvement verbatim", "Q9_Code_01", "Q9_Code_02", "Q9_Code_03", "Q9_Code_04", "Q9_Code_05", "Q9_Code_06", "Q9_Code_07", "Q9_Code_08", "Q9_Code_09", "Q9_Code_10", "Q10. Permit to Follow Up", "Q11_Request Manulife to call back", "Daily Flag Report", "AGE", "Age Group", "CUSTOMER_CATE", "NUMBER_OF_POLICYS", "ANNUAL_INCOME", "Income Group ", "PRODUCT_CATEGORY", "APE Group", "PREMIUM_PAYMENT_MOD", "CUSTOMER_TENTURE_MANULIFE", "Tenure Group", "PAYMENT_METHOD", "AGENT_ID", "AM_NM", "AGENT_LOCATION", "ORPHAN_STATUS", "UNDERWRITER_ID", "PROCESSING_TIME", "SUBMISSION_DATE", "DATA_ENTRY_DATE", "CUSTOMER_CONFIRMED_DATE", "UW_REASULT", "TRXN_DT", "TRXN_AMT", "PAID_TO_DATE", "Re-PTD" };
 
             for (int i = 0; i <= Header_Name.Length - 1; i++)
             {
@@ -112,7 +112,7 @@ namespace Daily_Report
                 xlWorkSheet.Cells[2, i].BorderAround(Excel.XlLineStyle.xlContinuous, Excel.XlBorderWeight.xlThin, Excel.XlColorIndex.xlColorIndexAutomatic, Excel.XlColorIndex.xlColorIndexAutomatic);
             }
 
-            xlWorkSheet.Range[xlWorkSheet.Cells[2, 13], xlWorkSheet.Cells[2, 57]].Merge();
+            xlWorkSheet.Range[xlWorkSheet.Cells[2, 13], xlWorkSheet.Cells[2, 54]].Merge();
             xlWorkSheet.Cells[2, 13] = "tNPS Survey (response and coded Oes)";
             xlWorkSheet.Cells[2, 13].HorizontalAlignment = 3;
             //xlWorkSheet.Cells[2, 9].Interior.Color = System.Drawing.ColorTranslator.ToOle(System.Drawing.Color.LightGreen);
@@ -134,10 +134,20 @@ namespace Daily_Report
                 xlWorkSheet.Cells[2, i].BorderAround(Excel.XlLineStyle.xlContinuous, Excel.XlBorderWeight.xlThin, Excel.XlColorIndex.xlColorIndexAutomatic, Excel.XlColorIndex.xlColorIndexAutomatic);
             }
 
+            xlWorkSheet.Range[xlWorkSheet.Cells[2, 55], xlWorkSheet.Cells[2, 57]].Merge();
+            xlWorkSheet.Cells[2, 55] = "Official use";
+            xlWorkSheet.Cells[2, 55].HorizontalAlignment = 3;
+            xlWorkSheet.Cells[2, 55].Interior.Color = System.Drawing.ColorTranslator.ToOle(System.Drawing.Color.DarkGray);
+            for (int i = 55; i <= 57; i++)
+            {
+                //xlWorkSheet.Cells[3, i].Interior.Color = System.Drawing.ColorTranslator.ToOle(System.Drawing.Color.DarkGray);
+                xlWorkSheet.Cells[2, i].BorderAround(Excel.XlLineStyle.xlContinuous, Excel.XlBorderWeight.xlThin, Excel.XlColorIndex.xlColorIndexAutomatic, Excel.XlColorIndex.xlColorIndexAutomatic);
+            }
+
             xlWorkSheet.Range[xlWorkSheet.Cells[2, 58], xlWorkSheet.Cells[2, 83]].Merge();
-            xlWorkSheet.Cells[2, 58] = "Official use";
+            xlWorkSheet.Cells[2, 58] = "  "; // No Name for Hearder 
             xlWorkSheet.Cells[2, 58].HorizontalAlignment = 3;
-            xlWorkSheet.Cells[2, 58].Interior.Color = System.Drawing.ColorTranslator.ToOle(System.Drawing.Color.DarkGray);
+            xlWorkSheet.Cells[2, 58].Interior.Color = System.Drawing.ColorTranslator.ToOle(System.Drawing.Color.Orange);
             for (int i = 58; i <= 83; i++)
             {
                 //xlWorkSheet.Cells[3, i].Interior.Color = System.Drawing.ColorTranslator.ToOle(System.Drawing.Color.DarkGray);
@@ -178,12 +188,8 @@ namespace Daily_Report
                 }
             }
             //Column in DB
-
-            //int[] colidex = { 28, 29, 37, 38, 40, 41, 43, 44, 45, 46, 47, 48, 50, 4 };
             int[] colidex = { 28, 29, 4, 33, 35, 36, 38, 39, 40, 42, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 55, 56, 57, 58, 60 };
             //Column in Daily-Report
-            //int[] reportidex = { 4, 7, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 21 };
-            //int[] reportidex = { 4, 8, 9, 10, 11, 13, 24, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 40, 41, 42, 53, 54 };
             int[] reportidex = { 4, 10, 11, 12, 13, 15, 26, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 42, 43, 44, 55, 56 };
             int rowCnt = IDcode.Count - 1;
             for (int rowidex = IDcode.Count - 1; rowidex <= IDcode.Count - 1; rowidex--)
@@ -194,7 +200,6 @@ namespace Daily_Report
                 xlWorkSheet.Cells[(rowCnt - rowidex) + 4, 1] = "KH";
                 xlWorkSheet.Cells[(rowCnt - rowidex) + 4, 2] = "Payment";
                 xlWorkSheet.Cells[(rowCnt - rowidex) + 4, 3] = batchNum;
-                //xlWorkSheet.Cells[(rowCnt - rowidex) + 4, 8] = "Completed";
                 if (xlRange2.Cells[IDcode[rowidex], 32].Value2.ToString().Trim() == "99. Other (ផ្សេងៗ​ ទៀត)") //99. Other (ផ្សេងៗ​ ទៀត)
                 {
                     xlWorkSheet.Cells[(rowCnt - rowidex) + 4, 12] = xlRange2.Cells[IDcode[rowidex], 33].Value2.ToString().Trim();
@@ -215,9 +220,6 @@ namespace Daily_Report
                     {
                         xlWorkSheet.Cells[(rowCnt - rowidex) + 4, colbd].BorderAround(Excel.XlLineStyle.xlContinuous, Excel.XlBorderWeight.xlThin, Excel.XlColorIndex.xlColorIndexAutomatic, Excel.XlColorIndex.xlColorIndexAutomatic);
                     }
-                    //xlWorkSheet.Cells[(rowCnt - rowidex) + 4, reportidex[i]].BorderAround(Excel.XlLineStyle.xlContinuous, Excel.XlBorderWeight.xlThin, Excel.XlColorIndex.xlColorIndexAutomatic, Excel.XlColorIndex.xlColorIndexAutomatic);
-                    //xlWorkSheet.Cells[(rowCnt - rowidex) + 4, 20].BorderAround(Excel.XlLineStyle.xlContinuous, Excel.XlBorderWeight.xlThin, Excel.XlColorIndex.xlColorIndexAutomatic, Excel.XlColorIndex.xlColorIndexAutomatic);
-                    //xlWorkSheet.get_Range("A" + (rowCnt - rowidex), "AN" + reportidex[i]).Cells.Borders.LineStyle = Excel.XlLineStyle.xlContinuous;
 
                     if (i == 0)
                     {
